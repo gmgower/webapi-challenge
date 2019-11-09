@@ -101,7 +101,7 @@ router.delete('/:id', validateProjectId, (req, res) => {
         } )
 })
 
-// custom middleware
+//customs middleware
 function validateProjectId(req, res, next) {
     const {id} = req.params;
 
