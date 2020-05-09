@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    Express is more or less the React framework for Node. It sits on top of the Node.js server and allows for extra functionality like routing and custom middleware. Express is very flexible, which means developers using it have to make more decisions.
+
 - [ ] Describe Middleware?
+
+    Middleware are functions that are executed in the order they are introduced into the server code. For example, before a request can be made, a middleware function might first require that the request be made in a certain format (e.g., needs a name, can't exceed a certain length) or that the user has the right credentials to make the request.
 
 - [ ] Describe a Resource?
 
+    A resource is information that lives within a server. Users can write requests to perform operations using the resources.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
-- [ ] How can we partition our application into sub-applications?
+    An API can return a 200 OK status code to let clients know that the request was successful
+
+- [ ] How can we partition our application into sub-applications? 
+
+    By using a Express router to organize our code in separate files. For example, we can keep our index.js and server.js file separately from our helpers(CRUD endpoints). Setup like these makes it easier to debug for other developers.
 
 ## Project Setup
 
@@ -76,7 +86,7 @@ Design and build the necessary endpoints to:
 - [ ] Perform CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
 - [ ] Retrieve the list of actions for a project.
 
-### Database Schemas
+### Database Schemasq
 
 The _schemas_ (properties and data type of each property) used to store and retrieve the resources inside the included database (`lambda.sqlite3`) is described below.
 
@@ -109,3 +119,5 @@ Now that we have a way to add, update, remove and retrieve data from the provide
 - From the React application show a list of all _projects_ using the API you built.
 - Add functionality to show the details of a project, including its actions, when clicking a project name in the list. Use React Router to navigate to a separate route to show the project details.
 - Add styling! Perhaps with [`styled-components`](https://www.styled-components.com/).
+
+gmg
